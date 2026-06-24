@@ -10,28 +10,30 @@
         @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;900&display=swap');
         body { 
             font-family: 'Vazirmatn', sans-serif; 
-        }
-        .hero-bg {
-            background-image: linear-gradient(rgba(20,15,12,0.95), rgba(20,15,12,0.95)), url('https://picsum.photos/id/1015/1920/1080');
+            background-image: linear-gradient(rgba(26,18,15,0.92), rgba(26,18,15,0.92)), 
+                              url('https://picsum.photos/id/1015/1920/1200');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
+        }
+        .hero-bg {
+            background: transparent;
         }
         .card {
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background-color: rgba(15,10,8,0.85);
         }
         .card:hover {
             transform: translateY(-15px);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
         }
         .accent { color: #D97757; }
-        .text-primary { color: #1F120A; }
-        .text-secondary { color: #4B3F35; }
     </style>
 </head>
-<body class="bg-[#1A120F] text-[#EDE0D4]">
+<body class="text-[#EDE0D4]">
 
     <!-- Navbar -->
-    <nav class="bg-[#0F0A08] border-b border-[#3C2A20] sticky top-0 z-50 shadow-xl">
+    <nav class="bg-[#0F0A08]/95 backdrop-blur-md border-b border-[#3C2A20] sticky top-0 z-50 shadow-xl">
         <div class="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center">
             <div class="flex items-center gap-4">
                 <div class="w-14 h-14 bg-gradient-to-br from-[#D97757] to-[#8B4513] rounded-2xl flex items-center justify-center text-4xl shadow-inner">🏆</div>
@@ -61,21 +63,21 @@
     </section>
 
     <!-- Stats -->
-    <section class="py-16 bg-[#0F0A08]">
+    <section class="py-16">
         <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center px-6">
-            <div class="card bg-[#1A120F] p-8 rounded-3xl border border-[#3C2A20]">
+            <div class="card p-8 rounded-3xl border border-[#3C2A20]">
                 <div class="text-5xl font-bold accent">۵۰۰+</div>
                 <div class="mt-3 text-gray-400">پروژه موفق</div>
             </div>
-            <div class="card bg-[#1A120F] p-8 rounded-3xl border border-[#3C2A20]">
+            <div class="card p-8 rounded-3xl border border-[#3C2A20]">
                 <div class="text-5xl font-bold accent">۹۸٪</div>
                 <div class="mt-3 text-gray-400">رضایت مشتری</div>
             </div>
-            <div class="card bg-[#1A120F] p-8 rounded-3xl border border-[#3C2A20]">
+            <div class="card p-8 rounded-3xl border border-[#3C2A20]">
                 <div class="text-5xl font-bold accent">۱۲۰+</div>
                 <div class="mt-3 text-gray-400">مشتری فعال</div>
             </div>
-            <div class="card bg-[#1A120F] p-8 rounded-3xl border border-[#3C2A20]">
+            <div class="card p-8 rounded-3xl border border-[#3C2A20]">
                 <div class="text-5xl font-bold accent">۲۵+</div>
                 <div class="mt-3 text-gray-400">سال تجربه</div>
             </div>
@@ -83,31 +85,31 @@
     </section>
 
     <!-- Services -->
-    <section id="services" class="py-24 bg-[#1A120F]">
+    <section id="services" class="py-24">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-5xl font-bold text-center mb-20 text-white">خدمات ما</h2>
             <div class="grid md:grid-cols-3 gap-10">
-                <div class="card bg-[#0F0A08] p-10 rounded-3xl border border-[#3C2A20] hover:border-[#D97757]">
+                <div class="card p-10 rounded-3xl border border-[#3C2A20] hover:border-[#D97757]">
                     <i class="fas fa-chart-line text-6xl accent mb-8"></i>
                     <h3 class="text-3xl font-bold mb-4 text-white">استراتژی فروش</h3>
-                    <p class="text-gray-400 leading-relaxed">طراحی و اجرای سیستم‌های فروش پیشرفته و افزایش درآمد</p>
+                    <p class="text-gray-400 leading-relaxed">طراحی و اجرای سیستم‌های فروش پیشرفته</p>
                 </div>
-                <div class="card bg-[#0F0A08] p-10 rounded-3xl border border-[#3C2A20] hover:border-[#D97757]">
+                <div class="card p-10 rounded-3xl border border-[#3C2A20] hover:border-[#D97757]">
                     <i class="fas fa-bullhorn text-6xl accent mb-8"></i>
                     <h3 class="text-3xl font-bold mb-4 text-white">کمپین تبلیغاتی</h3>
-                    <p class="text-gray-400 leading-relaxed">کمپین‌های خلاقانه و هدفمند با نتایج قابل اندازه‌گیری</p>
+                    <p class="text-gray-400 leading-relaxed">کمپین‌های خلاقانه و هدفمند</p>
                 </div>
-                <div class="card bg-[#0F0A08] p-10 rounded-3xl border border-[#3C2A20] hover:border-[#D97757]">
+                <div class="card p-10 rounded-3xl border border-[#3C2A20] hover:border-[#D97757]">
                     <i class="fas fa-mobile-alt text-6xl accent mb-8"></i>
                     <h3 class="text-3xl font-bold mb-4 text-white">بازاریابی دیجیتال</h3>
-                    <p class="text-gray-400 leading-relaxed">سئو، تبلیغات گوگل، اینستاگرام و مدیریت شبکه‌های اجتماعی</p>
+                    <p class="text-gray-400 leading-relaxed">سئو، تبلیغات و مدیریت شبکه‌های اجتماعی</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#0F0A08] py-16 border-t border-[#3C2A20]">
+    <footer class="bg-[#0F0A08]/90 backdrop-blur-md py-16 border-t border-[#3C2A20]">
         <div class="max-w-7xl mx-auto px-6 text-center">
             <p class="text-3xl font-bold mb-3 text-white">تیم حرفه‌ای‌ها</p>
             <p class="text-[#D97757]">Team of Professionals © ۱۴۰۵</p>
