@@ -415,129 +415,20 @@
       .contact-wrapper, .footer-top { grid-template-columns: 1fr; }
     }
     @media (max-width: 768px) {
-      html, body {
-        overflow-x: hidden !important;
-        width: 100%;
-        max-width: 100vw;
-      }
-      .container {
-        padding: 0 16px;
-        width: 100%;
-        max-width: 100%;
-      }
-      .header .container {
-        height: 60px;
-      }
-      .logo-fa { font-size: 0.95rem; }
-      .logo-en { font-size: 0.6rem; }
-      .logo-icon { width: 36px; height: 36px; font-size: 0.95rem; border-radius: 10px; }
-
       .nav {
-        display: none;
-        position: fixed;
-        top: 60px; right: 0; left: 0;
-        background: rgba(255,255,255,0.95);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        flex-direction: column;
-        padding: 12px 16px 16px;
-        gap: 4px;
-        border-bottom: 1px solid rgba(0,0,0,0.08);
-        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-        z-index: 999;
+        position: fixed; top: 70px; right: 0; left: 0;
+        background: rgba(255,255,255,0.9); backdrop-filter: blur(20px);
+        flex-direction: column; padding: 16px; gap: 4px;
+        border-bottom: 1px solid rgba(0,0,0,0.06);
+        transform: translateY(-120%); opacity: 0; pointer-events: none; transition: all 0.3s;
       }
-      .nav.open {
-        display: flex !important;
-      }
-      .nav a {
-        padding: 12px 16px;
-        font-size: 1rem;
-        border-radius: 12px;
-      }
-      .menu-toggle {
-        display: flex !important;
-        z-index: 1001;
-      }
-
-      .hero {
-        min-height: auto;
-        padding: 90px 0 50px;
-      }
-      .hero h1 {
-        font-size: 2rem;
-        word-wrap: break-word;
-      }
-      .hero-sub {
-        letter-spacing: 2px;
-        font-size: 0.85rem;
-      }
-      .hero-desc {
-        font-size: 0.95rem;
-        padding: 0 4px;
-      }
-      .hero-btns {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-      }
-      .btn {
-        width: 100%;
-        max-width: 280px;
-        justify-content: center;
-      }
-      .hero-stats {
-        gap: 10px;
-        width: 100%;
-      }
-      .stat {
-        flex: 1 1 40%;
-        min-width: 0;
-        padding: 14px 10px;
-      }
-      .stat-num { font-size: 1.25rem; }
-      .stat-label { font-size: 0.75rem; }
-
-      .grid-3, .grid-4 {
-        grid-template-columns: 1fr;
-        gap: 16px;
-      }
-      .card {
-        padding: 24px 20px;
-      }
-      .card h3 { font-size: 1.1rem; }
-
-      section { padding: 60px 0; }
-      .section-title { font-size: 1.5rem; }
-      .section-desc { font-size: 0.95rem; }
-
-      .cta-box { padding: 36px 20px; }
-      .cta-box h2 { font-size: 1.3rem; }
-
-      .contact-form { padding: 24px 18px; }
-      .info-item { padding: 14px; }
-
-      .footer { padding: 40px 0 24px; }
-      .footer-top { gap: 28px; }
-
-      .modal-overlay { padding: 12px; }
-      .modal {
-        max-height: 92vh;
-        border-radius: 18px;
-        width: 100%;
-      }
-      .modal-header {
-        padding: 18px 16px 12px;
-        border-radius: 18px 18px 0 0;
-      }
-      .modal-header h2 { font-size: 1.1rem; }
-      .modal-body { padding: 14px 16px 24px; }
-      .course-item { padding: 18px 14px; }
-      .course-item h3 { font-size: 1.05rem; }
-    }
-
-    @media (max-width: 400px) {
-      .hero h1 { font-size: 1.7rem; }
-      .stat { flex: 1 1 100%; }
+      .nav.open { transform: translateY(0); opacity: 1; pointer-events: auto; }
+      .menu-toggle { display: flex; }
+      .hero-stats { gap: 12px; }
+      .stat { min-width: 100px; padding: 14px 18px; }
+      .stat-num { font-size: 1.4rem; }
+      .modal { max-height: 92vh; border-radius: 20px; }
+      .modal-header, .modal-body { padding-left: 18px; padding-right: 18px; }
     }
   </style>
 </head>
@@ -752,9 +643,6 @@
           <div class="info-item">
             <div class="info-icon"><i class="fas fa-phone"></i></div>
             <div>
-              <h4>تلفن</h4>
-              <p>۰۲۱-۱۲۳۴۵۶۷۸</p>
-            </div>
           </div>
           <div class="info-item">
             <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
@@ -823,7 +711,7 @@
         <!-- Course 1 -->
         <div class="course-item">
           <span class="course-badge">دوره تخصصی بین‌المللی</span>
-          <h3>دوره‌های حرفه‌ای تخصصی بین‌المللی TRX </h3>
+          <h3>دوره‌های حرفه‌ای تخصصی بین‌المللیTRX </h3>
 
           <div class="course-limited">
             <i class="fas fa-exclamation-circle"></i>
@@ -861,7 +749,7 @@
         <!-- Course 1 -->
         <div class="course-item">
           <span class="course-badge">دوره تخصصی بین‌المللی</span>
-          <h3>دوره‌های حرفه‌ای تخصصی بین‌المللی DANCE </h3>
+          <h3>دوره‌های حرفه‌ای تخصصی بین‌المللی DANCE</h3>
 
           <div class="course-limited">
             <i class="fas fa-exclamation-circle"></i>
@@ -895,14 +783,11 @@
             <a href="#contact" class="btn btn-primary btn-sm" onclick="closeCoachingModal()">ثبت‌نام در این دوره</a>
           </div>
         </div>
-
-        <!-- Placeholder for more courses -->
-        <div style="text-align:center; padding: 20px 0 8px; color: var(--text-muted); font-size: 0.9rem;">
 
         <!-- Course 1 -->
         <div class="course-item">
           <span class="course-badge">دوره تخصصی بین‌المللی</span>
-          <h3>دوره‌های حرفه‌ای تخصصی بین‌المللی 4D PRO </h3>
+          <h3>دوره‌های حرفه‌ای تخصصی بین‌المللی4D PRO </h3>
 
           <div class="course-limited">
             <i class="fas fa-exclamation-circle"></i>
@@ -936,14 +821,11 @@
             <a href="#contact" class="btn btn-primary btn-sm" onclick="closeCoachingModal()">ثبت‌نام در این دوره</a>
           </div>
         </div>
-
-        <!-- Placeholder for more courses -->
-        <div style="text-align:center; padding: 20px 0 8px; color: var(--text-muted); font-size: 0.9rem;">
 
         <!-- Course 1 -->
         <div class="course-item">
           <span class="course-badge">دوره تخصصی بین‌المللی</span>
-          <h3>دوره‌های حرفه‌ای تخصصی بین‌المللی FITNESS MODELING </h3>
+          <h3>دوره‌های حرفه‌ای تخصصی بین‌المللیFITNESS MODELING </h3>
 
           <div class="course-limited">
             <i class="fas fa-exclamation-circle"></i>
@@ -977,9 +859,6 @@
             <a href="#contact" class="btn btn-primary btn-sm" onclick="closeCoachingModal()">ثبت‌نام در این دوره</a>
           </div>
         </div>
-
-        <!-- Placeholder for more courses -->
-        <div style="text-align:center; padding: 20px 0 8px; color: var(--text-muted); font-size: 0.9rem;">
 
         <!-- Course 1 -->
         <div class="course-item">
@@ -1019,13 +898,10 @@
           </div>
         </div>
 
-        <!-- Placeholder for more courses -->
-        <div style="text-align:center; padding: 20px 0 8px; color: var(--text-muted); font-size: 0.9rem;">
-
         <!-- Course 1 -->
         <div class="course-item">
           <span class="course-badge">دوره تخصصی بین‌المللی</span>
-          <h3>دوره‌های حرفه‌ای تخصصی بین‌المللی EMS</h3>
+          <h3>دوره‌های حرفه‌ای تخصصی بین‌المللیEMS </h3>
 
           <div class="course-limited">
             <i class="fas fa-exclamation-circle"></i>
@@ -1059,11 +935,6 @@
             <a href="#contact" class="btn btn-primary btn-sm" onclick="closeCoachingModal()">ثبت‌نام در این دوره</a>
           </div>
         </div>
-
-        <!-- Placeholder for more courses -->
-        <div style="text-align:center; padding: 20px 0 8px; color: var(--text-muted); font-size: 0.9rem;">
-
-
 
         <!-- Course 1 -->
         <div class="course-item">
@@ -1103,13 +974,10 @@
           </div>
         </div>
 
-        <!-- Placeholder for more courses -->
-        <div style="text-align:center; padding: 20px 0 8px; color: var(--text-muted); font-size: 0.9rem;">
-
         <!-- Course 1 -->
         <div class="course-item">
           <span class="course-badge">دوره تخصصی بین‌المللی</span>
-          <h3>دوره‌های حرفه‌ای تخصصی بین‌المللی CROSS FIT </h3>
+          <h3>دوره‌های حرفه‌ای تخصصی بین‌المللیCROSS FIT </h3>
 
           <div class="course-limited">
             <i class="fas fa-exclamation-circle"></i>
@@ -1144,14 +1012,10 @@
           </div>
         </div>
 
-        <!-- Placeholder for more courses -->
-        <div style="text-align:center; padding: 20px 0 8px; color: var(--text-muted); font-size: 0.9rem;">
-
-
         <!-- Course 1 -->
         <div class="course-item">
           <span class="course-badge">دوره تخصصی بین‌المللی</span>
-          <h3>دوره‌های حرفه‌ای تخصصی بین‌المللی ZUMBA </h3>
+          <h3>دوره‌های حرفه‌ای تخصصی بین‌المللیZUMBA </h3>
 
           <div class="course-limited">
             <i class="fas fa-exclamation-circle"></i>
@@ -1186,14 +1050,86 @@
           </div>
         </div>
 
-        <!-- Placeholder for more courses -->
-        <div style="text-align:center; padding: 20px 0 8px; color: var(--text-muted); font-size: 0.9rem;">
-
-
         <!-- Course 1 -->
         <div class="course-item">
           <span class="course-badge">دوره تخصصی بین‌المللی</span>
-          <h3>دوره‌های حرفه‌ای تخصصی بین‌المللی FITNESS </h3>
+          <h3>دوره‌های حرفه‌ای تخصصی بین‌المللی FITNESS</h3>
+
+          <div class="course-limited">
+            <i class="fas fa-exclamation-circle"></i>
+            ثبت‌نام محدود
+          </div>
+
+          <ul class="course-features">
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <span>اعطای <strong>مدرک معتبر</strong> در پایان دوره</span>
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <span>با حضور <strong>بهترین اساتید دانشگاهی و برجسته بین‌المللی</strong></span>
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <span>امکان اقدام برای دریافت <strong>کارت حرفه‌ای مربیگری</strong> از دانشگاه بین‌المللی معتبر در کشور <strong>بلژیک</strong></span>
+            </li>
+          </ul>
+
+          <div class="course-visa">
+            <i class="fas fa-passport"></i>
+            <div>
+              <strong>قابلیت گرفتن ویزا و اقامت</strong> کشورهای:<br>
+              آمریکا · هلند · کانادا · اسپانیا · فنلاند · ایسلند · آلمان · اتریش · پرتغال
+            </div>
+          </div>
+
+          <div class="course-actions">
+            <a href="#contact" class="btn btn-primary btn-sm" onclick="closeCoachingModal()">ثبت‌نام در این دوره</a>
+          </div>
+        </div>
+
+<!-- Course 1 -->
+        <div class="course-item">
+          <span class="course-badge">دوره تخصصی بین‌المللی</span>
+          <h3>دوره‌های حرفه‌ای تخصصی بین‌المللی YOGA'S Aerail</h3>
+
+          <div class="course-limited">
+            <i class="fas fa-exclamation-circle"></i>
+            ثبت‌نام محدود
+          </div>
+
+          <ul class="course-features">
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <span>اعطای <strong>مدرک معتبر</strong> در پایان دوره</span>
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <span>با حضور <strong>بهترین اساتید دانشگاهی و برجسته بین‌المللی</strong></span>
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i>
+              <span>امکان اقدام برای دریافت <strong>کارت حرفه‌ای مربیگری</strong> از دانشگاه بین‌المللی معتبر در کشور <strong>بلژیک</strong></span>
+            </li>
+          </ul>
+
+          <div class="course-visa">
+            <i class="fas fa-passport"></i>
+            <div>
+              <strong>قابلیت گرفتن ویزا و اقامت</strong> کشورهای:<br>
+              آمریکا · هلند · کانادا · اسپانیا · فنلاند · ایسلند · آلمان · اتریش · پرتغال
+            </div>
+          </div>
+
+          <div class="course-actions">
+            <a href="#contact" class="btn btn-primary btn-sm" onclick="closeCoachingModal()">ثبت‌نام در این دوره</a>
+          </div>
+        </div>
+
+<!-- Course 1 -->
+        <div class="course-item">
+          <span class="course-badge">دوره تخصصی بین‌المللی</span>
+          <h3>دوره‌های حرفه‌ای تخصصی بین‌المللی PILATES</h3>
 
           <div class="course-limited">
             <i class="fas fa-exclamation-circle"></i>
@@ -1230,99 +1166,3 @@
 
 
 
-        <!-- Placeholder for more courses -->
-        <div style="text-align:center; padding: 20px 0 8px; color: var(--text-muted); font-size: 0.9rem;">
-
-      <!-- Course 1 -->
-        <div class="course-item">
-          <span class="course-badge">دوره تخصصی بین‌المللی</span>
-          <h3> دوره های مربیگری حرفه‌ای بین المللی PILATES 
-  YOGA'S Aerail _ swing
-</h3>
-
-          <div class="course-limited">
-            <i class="fas fa-exclamation-circle"></i>
-            ثبت‌نام محدود
-          </div>
-
-          <ul class="course-features">
-            <li>
-              <i class="fas fa-check-circle"></i>
-              <span>اعطای <strong>مدرک معتبر</strong> در پایان دوره</span>
-            </li>
-            <li>
-              <i class="fas fa-check-circle"></i>
-              <span>با حضور <strong>بهترین اساتید دانشگاهی و برجسته بین‌المللی</strong></span>
-            </li>
-            <li>
-              <i class="fas fa-check-circle"></i>
-              <span>امکان اقدام برای دریافت <strong>کارت حرفه‌ای مربیگری</strong> از دانشگاه بین‌المللی معتبر در کشور <strong>بلژیک</strong></span>
-            </li>
-          </ul>
-
-          <div class="course-visa">
-            <i class="fas fa-passport"></i>
-            <div>
-              <strong>قابلیت گرفتن ویزا و اقامت</strong> کشورهای:<br>
-آمریکا ، هلند ، فنلاند ، اسپانیا ، ایتالیا ، کانادا ، ایسلند ، آلمان ، اتریش ، پرتقال 
-            </div>
-          </div>
-
-          <div class="course-actions">
-            <a href="#contact" class="btn btn-primary btn-sm" onclick="closeCoachingModal()">ثبت‌نام در این دوره</a>
-          </div>
-        </div>
-
-        <!-- Placeholder for more courses -->
-        <div style="text-align:center; padding: 20px 0 8px; color: var(--text-muted); font-size: 0.9rem;">
-          دوره‌های بیشتر به زودی اضافه می‌شوند...
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <script>
-    // Mobile menu
-    const menuToggle = document.getElementById('menuToggle');
-    const nav = document.getElementById('nav');
-    menuToggle.addEventListener('click', () => nav.classList.toggle('open'));
-    document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
-
-    // Header scroll
-    window.addEventListener('scroll', () => {
-      document.getElementById('header').classList.toggle('scrolled', window.scrollY > 40);
-    });
-
-    // Fade-up animation
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-    // Form
-    document.getElementById('contactForm').addEventListener('submit', (e) => {
-      e.preventDefault();
-      e.target.innerHTML = '<div style="text-align:center;padding:40px 20px"><div style="font-size:3rem;margin-bottom:16px">✅</div><h3 style="margin-bottom:8px">درخواست شما ثبت شد!</h3><p style="color:var(--text-muted)">به زودی با شما تماس خواهیم گرفت.</p></div>';
-    });
-
-    // Coaching Modal
-    function openCoachingModal() {
-      document.getElementById('coachingModal').classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeCoachingModal() {
-      document.getElementById('coachingModal').classList.remove('active');
-      document.body.style.overflow = '';
-    }
-    // Close on overlay click
-    document.getElementById('coachingModal').addEventListener('click', (e) => {
-      if (e.target.id === 'coachingModal') closeCoachingModal();
-    });
-    // Close on Escape
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeCoachingModal();
-    });
-  </script>
-</body>
-</html>
